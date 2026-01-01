@@ -55,3 +55,16 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         }
     });
 });
+
+// Stacked Gallery Carousel Logic (Generic)
+const stackedGalleries = document.querySelectorAll('.stacked-gallery');
+
+stackedGalleries.forEach(gallery => {
+    gallery.addEventListener('click', () => {
+        // Move the first image (top one) to the end of the container (bottom)
+        const firstImg = gallery.querySelector('.gallery-img');
+        if (firstImg) {
+            gallery.appendChild(firstImg);
+        }
+    });
+});
